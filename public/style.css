@@ -1,8 +1,28 @@
+@font-face {
+    font-family: "fraunces";
+    src: url(./assets/fonts/fraunces/static/Fraunces_144pt-SemiBold.ttf)
+}
+
+@font-face {
+    font-family: "manrope";
+    src: url(./assets/fonts/manrope/static/Manrope-Regular.ttf)
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     display: flex;
     flex-direction: column;
     margin: 0;
-   
+}
+
+button {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
 }
 
 .top-section-container  {
@@ -13,20 +33,77 @@ body {
     grid-template-rows: 2fr 1fr;
     position: relative;
     overflow: hidden;
-}   
+}
+
+    img.phone,
+    img.phone-overlay {
+        width: 500px;
+        z-index: 1;
+        height: auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-right: auto;
+        margin-left: auto;
+        bottom: 10%;
+    }
+
+    img.phone-overlay {
+        opacity: 50%;
+    }
+
     .top-section {
         background-color: #24053e;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 17%;
+        width: 100%;
     }
+        .top-section button.link {
+            font-family: "manrope";
+            border-bottom: 2px solid #43ffa1;
+            font-size: 1em;
+        }
         .header {
             display: flex;
             flex-direction: row;
             justify-content: space-around;
             align-items: flex-end;
-            height: 100px;
+            height: 50px;
+            width: 100%;
         }
-        .header .link  {
-            color: #fffffe;
+            .header .link  {
+                color: #fffffe;
+            }
+
+        .top-section .learn-more-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            width: 400px;
+            gap: 20px;
         }
+            .learn-more-container p.message {
+                color: #fffffe;
+                text-align: center;
+                font-family: "fraunces";
+                font-size: 4rem;
+                margin: 0;
+            }
+                p.message span {
+                    border-bottom: 4px solid #43ffa1;
+                }
+
+            .learn-more-container button.learn-more {
+                width: 100px;
+                height: 50px;
+                background-color: #43ffa1;
+                font-family: "manrope";
+                color:#24053e;
+            }
+
     .top-section-curve {
         border-radius: 100%;
         background-color: #24053e;
@@ -35,5 +112,25 @@ body {
         position: absolute;
         top: 54%;
         left: -27%;
+        z-index: -1;
     }
     
+@media screen and (max-width: 400px){
+    .top-section .learn-more-container {
+        width: 340px;
+    }
+
+    img.phone,
+    img.phone-overlay {
+        width: 300px;
+        bottom: 15%;
+    }
+}
+
+@media screen and (max-width: 925px) {
+    img.phone,
+    img.phone-overlay {
+        width: 400px;
+        bottom: 10%;
+    }
+}
