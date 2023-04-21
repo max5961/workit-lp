@@ -52,6 +52,20 @@ button {
         opacity: 50%;
     }
 
+    img.spiral-left {
+        position: absolute;
+        z-index: 2;
+        top: 10%;
+        left: -7%;
+    }
+
+    img.spiral-right {
+        position: absolute;
+        z-index: 2;
+        right: -3%;
+        bottom: 37%;
+    }
+
     .top-section {
         background-color: #24053e;
         display: flex;
@@ -132,5 +146,23 @@ button {
     img.phone-overlay {
         width: 400px;
         bottom: 10%;
+    }
+
+    img.spiral-left {
+        left: -22%;
+    }
+
+    img.spiral-right {
+        right: -9%;
+    }
+}
+
+@media screen and (max-width: 725px) {
+    img.spiral-left {
+        opacity: 0;
+    }
+
+    img.spiral-right {
+        opacity: 0;
     }
 }
