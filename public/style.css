@@ -248,6 +248,21 @@ button {
                 background-color:#43ffa1;
             }
 
+footer {
+    background-color: #ffffff;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+    footer .social-media-links {
+        display: flex;
+        width: 125px;
+        justify-content: space-between;
+    }
+
 @media screen and (max-width: 1000px) {
     img.phone,
     img.phone-overlay {
