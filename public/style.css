@@ -16,6 +16,7 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0;
+    background-color: #fbf8ff;
 }
 
 button {
@@ -128,18 +129,44 @@ button {
         left: -27%;
         z-index: -1;
     }
-    
-@media screen and (max-width: 400px){
-    .top-section .learn-more-container {
-        width: 340px;
+
+.content-container {
+    display: grid;
+    align-self: center;
+    align-items: center;
+    gap: 5%;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    width: 75%;
+}
+    .content-container > * {
+        color: #1f0933;
+        text-align: center;
     }
 
-    img.phone,
-    img.phone-overlay {
-        width: 300px;
-        bottom: 15%;
+    .subcontent-container .number {
+        height: 50px;
+        width: 50px;
+        border: 1px solid #1f0933;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
     }
-}
+
+    .subcontent-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 275px;
+    }
+        .subcontent-container .media-text-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 75%;
+        }
 
 @media screen and (max-width: 925px) {
     img.phone,
@@ -155,6 +182,16 @@ button {
     img.spiral-right {
         right: -9%;
     }
+
+    .content-container {
+        grid-template-columns: repeat(auto-fit, minmax(90%, 1fr));
+    }
+
+    .subcontent-container {
+        flex-direction: row;
+        align-items: center;
+        height: auto;
+    }
 }
 
 @media screen and (max-width: 725px) {
@@ -164,5 +201,21 @@ button {
 
     img.spiral-right {
         opacity: 0;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .top-section .learn-more-container {
+        width: 340px;
+    }
+
+    img.phone,
+    img.phone-overlay {
+        width: 300px;
+        bottom: 15%;
+    }
+
+    .subcontent-container {
+        flex-direction: column;
     }
 }
