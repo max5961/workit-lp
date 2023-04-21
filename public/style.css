@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+   
+}
+
+.top-section-container  {
+    height: 800px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr;
+    position: relative;
+    overflow: hidden;
+}   
+    .top-section {
+        background-color: #24053e;
+    }
+        .header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: flex-end;
+            height: 100px;
+        }
+        .header .link  {
+            color: #fffffe;
+        }
+    .top-section-curve {
+        border-radius: 100%;
+        background-color: #24053e;
+        height: 200px;
+        width: 150%;
+        position: absolute;
+        top: 54%;
+        left: -27%;
+    }
+    
