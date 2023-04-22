@@ -280,6 +280,7 @@ footer {
 
     .content-container {
         grid-template-columns: repeat(auto-fit, minmax(90%, 1fr));
+        gap: 35px;
     }
 
     .subcontent-container {
@@ -287,6 +288,16 @@ footer {
         align-items: center;
         height: auto;
     }
+
+    .subcontent-container .media-text-container {
+        text-align: left;
+        align-items: flex-start;
+        margin-left: 25px;
+    }
+
+        .subcontent-container .media-text-container > * {
+            margin: 0;
+        }
 
     .bottom-section .apply-link-container {
         width: 75%;
@@ -324,9 +335,18 @@ footer {
         bottom: 15%;
     }
 
+    .middle-section .content-container {
+        gap: 35px;
+    }
+
     .subcontent-container {
         flex-direction: column;
     }
+
+        .subcontent-container .media-text-container {
+            align-items: center;
+            text-align: center;
+        }
 
     .bottom-section .absolutes-container {
         width: 90%;
